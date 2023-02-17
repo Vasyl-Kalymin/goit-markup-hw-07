@@ -1,3 +1,9 @@
+/*
+@media screen and (min-width: 1200px){
+
+}
+*/
+
 :root{
     /*шрифти*/
     --main-font: 'Roboto', sans-serif;
@@ -24,6 +30,10 @@
     --indent: 24px;
     --items: 4;
     --radius: 4px;
+    /*Brakepoints*/
+    --phone-screen: 480px;
+    --tablet-screen: 768px;
+    --desktop-screen: 1200px;
 }
 
 /*Базові стилі*/
@@ -34,10 +44,18 @@ body{
 }
 
 /*Додаємо загальний крас для секцій щоб посунути контент в середину*/
-.section {
-    padding-top: 120px;
-    padding-bottom: 120px;
+.section{
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
+
+@media screen and (min-width: 1200px){
+    .section {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+}
+
 
 .section.features {
     padding-bottom: 0;
@@ -48,12 +66,27 @@ body{
 }
 
 /*Загальний контейнер щоб обмежити вміст по ширині*/
-.container {
-    width: 1158px;
-    margin: 0 auto;
-    padding: 0 15px;
-    /*outline: 2px solid red;
-    outline-offset: -2px;*/
+.container{
+    min-width: 320px;
+    max-width: 426px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 16px;
+    outline: 2px solid red;
+    outline-offset: -2px;
+}
+
+@media screen and (min-width: 768px){
+    .container{
+        max-width: 768px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .container{
+        padding: 0 15px;
+        max-width: 1158px;
+    }
 }
 
 /*Скидання початок*/
@@ -211,6 +244,7 @@ ul {
 
 /*Стилізація головної секції*/
 .hero{
+    min-width: 320px;
     max-width: 1440px;
     margin-right: auto;
     margin-left: auto;
@@ -223,20 +257,48 @@ ul {
 }
 
 .hero-container{
-    padding-top: 188px;
-    padding-bottom: 188px;
+    padding-top: 112px;
+    padding-bottom: 112px;
+}
+
+@media screen and (min-width: 768px){
+    .hero-container{
+        padding-bottom: 108px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .hero-container{
+       padding-top: 188px;
+        padding-bottom: 188px;
+    }
 }
 
 .hero-title{
-    width: 496px;
+    max-width: 320px;
     margin-right: auto;
-    margin-bottom: 48px;
+    margin-bottom: 72px;
     margin-left: auto;
     color: var(--white-color);
-    font-size: 56px;
-    line-height: 1.07;
+    font-size: 36px;
+    line-height: calc(40/36);
     letter-spacing: 0.02em;
     text-align: center;
+}
+
+@media screen and (min-width: 768px){
+    .hero-title{
+        width: 496px;
+        margin-bottom: 40px;
+        font-size: 56px;
+        line-height: calc(60/56);
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .hero-title{
+        margin-bottom: 48px;
+    }
 }
 
 .btn{
@@ -252,7 +314,7 @@ ul {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: calc(24/16);
     letter-spacing: 0.04em;
     cursor: pointer;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
