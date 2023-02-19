@@ -110,5 +110,8 @@
     <symbol id="icon-vector" viewBox="0 0 32 32">
       <path d="M27.026 4.016a2.936 2.936 0 0 1 4.092.031 2.967 2.967 0 0 1 .108 4.112L15.563 27.853a2.923 2.923 0 0 1-2.103.945 2.926 2.926 0 0 1-2.136-.866L.937 17.489a2.966 2.966 0 0 1-.722-3.274 2.947 2.947 0 0 1 2.782-1.851 2.926 2.926 0 0 1 2.102.942l8.22 8.26L26.952 4.102c.025-.03.051-.059.078-.087h-.004z"/>
     </symbol>
+    <symbol id="charm_menu-hamburger" aria-hidden="true" viewBox="0 0 47 32">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4.364" d="M1.96 29.154h42.965M1.96 15.615h42.965M1.96 2.077h42.965"/>
+    </symbol>
   </defs>
 </svg>
