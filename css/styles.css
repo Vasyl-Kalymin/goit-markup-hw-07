@@ -115,11 +115,14 @@ ul {
     text-decoration: none;
 }
 
-/*Задаємо зображенням Display-block*/
+/*Задаємо зображенням Display-block + робимо зображення респонсивним*/
 .img-block {
     display: block;
     max-width: 100%;
     height: auto;
+
+    object-fit: cover;
+    object-position: center;
 }
 
 /*Робимо невидимі заголовки*/
@@ -177,7 +180,7 @@ ul {
     text-transform: uppercase;
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767.98px){
     .logo{
         margin-top: 24px;
         margin-right: auto;
@@ -205,7 +208,7 @@ ul {
     margin-right: auto;
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767.98px){
     .header-nav{
         display: none;
     }
@@ -264,7 +267,7 @@ ul {
     color: var(--pressed-state-color);
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767.98px){
     .header-contact-ul{
         display: none;
     }
@@ -300,7 +303,7 @@ ul {
     }
 }
 
-@media screen and (max-width: 1199px){
+@media screen and (max-width: 1199.98px){
     .header-contact-item:first-child{
         margin-bottom: 4px;
         padding-top: 24px;
@@ -345,10 +348,54 @@ ul {
     margin-left: auto;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), 
     rgba(46, 47, 66, 0.7)),
-    url(../images/people-office.jpg);
+    url(../images/hero/bg-mobile@1x.webp);
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
+}
 
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), 
+    rgba(46, 47, 66, 0.7)),
+    url(../images/hero/bg-mobile@2x.webp);
+  }
+}
+
+@media screen and (min-width: 429px){
+    .hero{
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), 
+        rgba(46, 47, 66, 0.7)),
+        url(../images/hero/bg-tablet@1x.webp);
+    }
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), 
+        rgba(46, 47, 66, 0.7)),
+        url(../images/hero/bg-tablet@2x.webp);
+        }
+    }
+}
+
+@media screen and (min-width: 769px){
+    .hero{
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), 
+        rgba(46, 47, 66, 0.7)),
+        url(../images/hero/bg-desctop@1x.webp);
+    }
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), 
+        rgba(46, 47, 66, 0.7)),
+        url(../images/hero/bg-desctop@2x.webp);
+        }
+    }
 }
 
 .hero-container{
@@ -437,7 +484,7 @@ ul {
     }
 }
 
-@media screen and (max-width: 1199px){
+@media screen and (max-width: 1199.98px){
     .features-list{
         row-gap: 72px;
     }   
@@ -509,7 +556,7 @@ ul {
 
 
 /*стилізація секції що ми робимо*/
-@media screen and (max-width: 1199px){
+@media screen and (max-width: 1199.98px){
     .profile{
         display: none;
     }
@@ -525,13 +572,13 @@ ul {
     background-color: var(--light-color);
 }
 
-@media screen and (max-width: 797px){
+@media screen and (max-width: 797.98px){
     .team{
         padding-bottom: 128px;
     }
 }
 
-@media screen and (min-width: 798px) and (max-width: 1199px){
+@media screen and (min-width: 798px) and (max-width: 1199.98px){
     .team{
         padding-bottom: 107px;
     }
@@ -543,7 +590,7 @@ ul {
     --items: 1;
 }
 
-@media screen and (min-width:768px) and (max-width: 1199px){
+@media screen and (min-width:768px) and (max-width: 1199.98px){
     .team-list{
         row-gap: 64px;
         column-gap: 24px;
@@ -668,7 +715,7 @@ ul {
     padding-bottom: 96px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px){
+@media screen and (min-width: 768px) and (max-width: 1199.98px){
     .footer-container{
         padding: 96px 108px;
     }
@@ -762,7 +809,7 @@ ul {
     letter-spacing: 0.02em;
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767.98px){
     .footer-media-text{
         text-align: center;
     }
@@ -952,7 +999,7 @@ ul {
 
 
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767.98px){
     .works-list {
         --indent: 0;
         row-gap: 48px;
