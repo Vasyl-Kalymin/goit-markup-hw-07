@@ -1235,7 +1235,8 @@ ul {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 392px;
+    min-width: 300px;
+    max-width: 392px;
     height: 586px;
     padding: 24px 16px;
     border-radius: 4px;
@@ -1252,7 +1253,7 @@ ul {
 
 @media screen and (min-width: 768px){
     .modal{
-        width: 408px;
+        max-width: 408px;
         padding: 24px;
     }
 }
